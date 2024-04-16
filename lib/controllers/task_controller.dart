@@ -1,5 +1,6 @@
+import 'package:todo_app/services/firestore_storage.dart';
 import '../model/task.dart';
-import '../services/local_storage.dart';
+//import '../services/local_storage.dart';
 import '../services/storage.dart';
 
 //The purpose of this file is to command the behavior of tasks. 
@@ -12,7 +13,7 @@ class TaskController {
 
   static final TaskController _singleton = TaskController._internal();
 
-  final Storage _storage = LocalStorage();
+  final Storage _storage = FirestoreStorage(); //Updated to firestorage step 5.c
 
   Stream<List<Task>> getStream() => _storage.getTasks();
 

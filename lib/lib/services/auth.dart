@@ -8,8 +8,11 @@ class Auth {
   Future<String?> signInWithEmailAndPassword(
       {required String email, required String password}) async {
     try {
-      // TODO use _auth to create an account
-      return null;
+      await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return null; // Return null if sign-in is successful
     } on FirebaseAuthException catch (e) {
       return _parseSignInAuthException(e);
     }
@@ -18,21 +21,25 @@ class Auth {
   Future<String?> createAccountWithEmailAndPassword(
       {required String email, required String password}) async {
     try {
-      // TODO use _auth to create an account
-      return null;
+      await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return null; // Return null if account creation is successful
     } on FirebaseAuthException catch (e) {
       return _parseCreateAccountAuthException(e);
     }
   }
 
   String? get userId {
-    // TODO
+    return _auth.currentUser?.uid;
   }
 
   void signOut() {
-    // TODO
+    _auth.signOut();
   }
 
+//Added authentication exceptions
   String _parseSignInAuthException(FirebaseAuthException exception) {
     switch (exception.code) {
       case 'invalid-email':

@@ -3,8 +3,8 @@ import 'package:todo_app/pages/new_task_page.dart';
 import '../controllers/task_controller.dart';
 import '../model/task.dart';
 
-// Week 6
-// I estimated this would take me 8 hours. It took me about 9 hours
+// Week 7
+// I estimated this would take me 5 hours. It took me about * hours
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

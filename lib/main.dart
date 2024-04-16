@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'lib/pages/sign_in_account_page.dart';
+import 'pages/home_page.dart';
 
 
 Future<void> main() async {
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         // Define named routes
         '/createAccount': (context) => CreateAccountPage(),
         '/signIn': (context) => SignInAccountPage(),
+        '/home': (context) => HomePage(), // Define route for the home page
       },
     );
   }

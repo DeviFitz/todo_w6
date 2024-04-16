@@ -38,7 +38,8 @@ class MyApp extends StatelessWidget {
         // Define named routes
         '/createAccount': (context) => CreateAccountPage(),
         '/signIn': (context) => SignInAccountPage(),
-        '/home': (context) => HomePage(), // Define route for the home page
+        '/home': (context) => HomePage(), // Define route for the home page        
+        '/': (context) => OpeningPage(), // Define route for the opening page. step 8.a
       },
     );
   }
